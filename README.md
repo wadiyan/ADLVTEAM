@@ -99,7 +99,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 1. **Clone repositori**
    ```bash
    git clone https://github.com/username/adlv-website.git
-   cd adlv-website
+   cd program
    ```
 
 2. **Instal dependensi**

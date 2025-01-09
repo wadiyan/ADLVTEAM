@@ -3,7 +3,7 @@
 ## Bagian Yang Dikerjakan
 
 - **Halaman Katalog**  
-  <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog">
+  <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog" height="800">
 
 - **Halaman Kontak**  
   <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak">

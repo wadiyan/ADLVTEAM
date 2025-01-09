@@ -2,8 +2,6 @@
 
 ## Bagian Yang Dikerjakan
 
-- **Halaman Katalog**  
-  <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog" height="700">
 
 - **Halaman Kontak**  
   <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak">
@@ -13,6 +11,10 @@
 
 - **Toogle Aksi Hamburg Button**  
   <img src="images/Toogle aksi Hammburg Button nav.JPG" alt="Toogle Aksi Hamburg Button">
+
+  - **Halaman Katalog**  
+  <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog" height="700">
+
 
 ### Kontribusi
 #### Wadiyan (IF22B)

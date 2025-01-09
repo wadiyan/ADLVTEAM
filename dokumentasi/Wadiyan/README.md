@@ -678,27 +678,37 @@
     }
     ```
     ```typescript
+10. **Menambahkan Assets**
 
-10. **Menambahkan assets**
-    - Logo
-    ![alt text](../../program/public/assets/icons/ADLV.png)
-    - Assets Image Keperluan MVP Layout
-    ![alt text](../../program/public/assets/images/ADLV-tsirt.png)
-    - Assets Banner
-    ![alt text](../../program/public/assets/images/banner.JPG) 
-    - Assets Foto Pendiri
-    ![alt text](../../program/public/assets/images/hafiz.jpg) 
-    - Assets Jacket
-    ![alt text](../../program/public/assets/images/jacket-1.png) 
-    - Assets model 
-    ![alt text](../../program/public/assets/images/model-2.png) 
-    - Assets baju lengan panjang 
-    ![alt text](../../program/public/assets/images/longTsirt-1.png) 
-    - Assets model adlv 
-    ![alt text](../../program/public/assets/images/model-adlv.png) 
-    - Assets Pendiri
-    ![alt text](<../../program/public/assets/images/Rexlicky .jpg>) 
-    - Assets t-sirt 
-    ![alt text](../../program/public/assets/images/tsirt-1.png)
-    - Assets Pendiri
-    ![alt text](../../program/public/assets/images/wadi.jpg)
+- **Logo**  
+  <img src="../../program/public/assets/icons/ADLV.png" alt="Logo" width="300">
+
+- **Assets Image Keperluan MVP Layout**  
+  <img src="../../program/public/assets/images/ADLV-tsirt.png" alt="MVP Layout" width="300">
+
+- **Assets Banner**  
+  <img src="../../program/public/assets/images/banner.JPG" alt="Banner" width="300">
+
+- **Assets Foto Pendiri**  
+  <img src="../../program/public/assets/images/hafiz.jpg" alt="Hafiz" width="300">
+
+- **Assets Jacket**  
+  <img src="../../program/public/assets/images/jacket-1.png" alt="Jacket" width="300">
+
+- **Assets Model**  
+  <img src="../../program/public/assets/images/model-2.png" alt="Model" width="300">
+
+- **Assets Baju Lengan Panjang**  
+  <img src="../../program/public/assets/images/longTsirt-1.png" alt="Baju Lengan Panjang" width="300">
+
+- **Assets Model ADLV**  
+  <img src="../../program/public/assets/images/model-adlv.png" alt="Model ADLV" width="300">
+
+- **Assets Pendiri**  
+  <img src="../../program/public/assets/images/Rexlicky.jpg" alt="Rexlicky" width="300">
+
+- **Assets T-shirt**  
+  <img src="../../program/public/assets/images/tsirt-1.png" alt="T-shirt" width="300">
+
+- **Assets Pendiri**  
+  <img src="../../program/public/assets/images/wadi.jpg" alt="Wadi" width="300">

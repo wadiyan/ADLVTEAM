@@ -2,17 +2,17 @@
 
 ## Bagian Yang Dikerjakan
 
-- **Halaman Utama**  
-  <img src="images/Halaman Utama.jpeg" alt="Halaman Utama">
-
 - **Halaman Katalog**  
   <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog" height="800">
 
-- **Toogle Aksi Hamburg Button**  
-  <img src="images/Toogle aksi Hammburg Button nav.JPG" alt="Toogle Aksi Hamburg Button">
-
 - **Halaman Kontak**  
   <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak">
+
+- **Halaman Utama**  
+  <img src="images/Halaman Utama.jpeg" alt="Halaman Utama">
+
+- **Toogle Aksi Hamburg Button**  
+  <img src="images/Toogle aksi Hammburg Button nav.JPG" alt="Toogle Aksi Hamburg Button">
 
 ### Kontribusi
 #### Wadiyan (IF22B)

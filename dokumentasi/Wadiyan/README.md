@@ -4,13 +4,13 @@
 
 
 - **Halaman Kontak**  
-  <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak" height="700>
+  <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak" height="700">
 
 - **Halaman Utama**  
-  <img src="images/Halaman Utama.jpeg" alt="Halaman Utama" height="700>
+  <img src="images/Halaman Utama.jpeg" alt="Halaman Utama" height="700">
 
 - **Toogle Aksi Hamburg Button**  
-  <img src="images/Toogle aksi Hammburg Button nav.JPG" alt="Toogle Aksi Hamburg Button" height="700>
+  <img src="images/Toogle aksi Hammburg Button nav.JPG" alt="Toogle Aksi Hamburg Button" height="700">
 
   - **Halaman Katalog**  
   <img src="images/Halaman Katalog.jpeg" alt="Halaman Katalog" height="700">

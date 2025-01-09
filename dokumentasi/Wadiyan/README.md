@@ -4,7 +4,7 @@
 
 
 - **Halaman Kontak**  
-  <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak" height="400">
+  <img src="images/Halaman Kontak.jpeg" alt="Halaman Kontak" width="400">
 
 - **Halaman Utama**  
   <img src="images/Halaman Utama.jpeg" alt="Halaman Utama" height="700">

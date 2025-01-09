@@ -677,7 +677,6 @@
     export default flattenColorPalette;
     }
     ```
-    ```typescript
 10. **Menambahkan Assets**
 
 - **Logo**  
@@ -705,7 +704,7 @@
   <img src="../../program/public/assets/images/model-adlv.png" alt="Model ADLV" width="300">
 
 - **Assets Pendiri**  
-  <img src="../../program/public/assets/images/Rexlicky.jpg" alt="Rexlicky" width="300">
+  <img src="../../program/public/assets/images/Rexlicky .jpg" alt="Rexlicky" width="300">
 
 - **Assets T-shirt**  
   <img src="../../program/public/assets/images/tsirt-1.png" alt="T-shirt" width="300">

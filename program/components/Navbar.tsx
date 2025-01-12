@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/">
-            <img src="assets/icons/ADLV.png" alt="logo" width={80} />
+            <img src="/assets/icons/ADLV.png" alt="logo" width={80} />
           </Link>
         </div>
 

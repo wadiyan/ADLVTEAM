@@ -1,7 +1,8 @@
 import React from "react";
 import MovingImage from "./components/MovingImage";
 import BannerIntro from "./components/BannerIntro";
-import { InfiniteMovingCardsDemo } from "../test/Page";
+import { InfiniteMovingCard } from "./components/InfiniteMovingCard";
+import Link from "next/link";
 import {BackgroundBeams} from "@/components/ui/background-beams"
 import { BackgroundLines } from "@/components/ui/background-lines";
 import TimerPromo from "./components/TimerPromo";
@@ -25,85 +26,82 @@ const HomePage = () => {
             <p className="text-lg mb-6">
               Belanja Jaket, Kaos, dan Hoodie dengan Mudah
             </p>
-            <a
-              href="/katalog"
-              className="bg-white text-gray-900 px-6 py-3 rounded-md font-bold hover:bg-gray-100"
+            <Link
+              href={""}lassName="bg-white text-gray-900 px-6 py-3 rounded-md font-bold hover:bg-gray-100"
             >
               Lihat Katalog
-            </a>
+            </Link>
           </div>
         </section> */}
 
       {/* Featured Products Section */}
       <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-black text-3xl font-bold ">Produk Terbaru</h2>
-              <p className="text-sm font-sans">
-                Jangan sampai ketinggalan update produk baru yang keren abis
-              </p>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-black text-3xl font-bold ">Produk Terbaru</h2>
+            <p className="text-sm font-sans">
+              Jangan sampai ketinggalan update produk baru yang keren abis
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Product 1 */}
+            <div className="bg-white shadow-md rounded-md overflow-hidden">
+              <img
+                src="/assets/images/tsirt-1.png"
+                alt="Produk 1"
+                className="w-full h-90 object-fill"
+              />
+              <div className="p-4">
+                <h3 className="text-black font-bold text-lg">Jaket Keren</h3>
+                <p className="text-gray-600">Rp 250.000</p>
+                <Link
+                  href={`/katalog/detail_produk?id=${1}`}
+                  className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                >
+                  Detail
+                </Link>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Product 1 */}
-              <div className="bg-white shadow-md rounded-md overflow-hidden">
-                <img
-                  src="/assets/images/tsirt-1.png"
-                  alt="Produk 1"
-                  className="w-full h-90 object-fill"
-                />
-                <div className="p-4">
-                  <h3 className="text-black font-bold text-lg">Jaket Keren</h3>
-                  <p className="text-gray-600">Rp 250.000</p>
-                  <a
-                    href="/detail-produk/1"
-                    className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
-                  >
-                    Detail
-                  </a>
-                </div>
-              </div>
 
-              {/* Product 2 */}
-              <div className="bg-white shadow-md rounded-md overflow-hidden">
-                <img
-                  src="/assets/images/ADLV-tsirt.png"
-                  alt="Produk 2"
-                  className="w-full h-90 object-fill"
-                />
-                <div className="p-4">
-                  <h3 className="text-black font-bold text-lg">Kaos Nyaman</h3>
-                  <p className="text-gray-600">Rp 150.000</p>
-                  <a
-                    href="/detail-produk/2"
-                    className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
-                  >
-                    Detail
-                  </a>
-                </div>
+            {/* Product 2 */}
+            <div className="bg-white shadow-md rounded-md overflow-hidden">
+              <img
+                src="/assets/images/ADLV-tsirt.png"
+                alt="Produk 2"
+                className="w-full h-90 object-fill"
+              />
+              <div className="p-4">
+                <h3 className="text-black font-bold text-lg">Kaos Nyaman</h3>
+                <p className="text-gray-600">Rp 150.000</p>
+                <Link
+                  href={`/katalog/detail_produk?id=${2}`}
+                  className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                >
+                  Detail
+                </Link>
               </div>
+            </div>
 
-              {/* Product 3 */}
-              <div className="bg-white shadow-md rounded-md overflow-hidden">
-                <img
-                  src="/assets/images/longTsirt-1.png"
-                  alt="Produk 3"
-                  className="w-full h-90 object-fill"
-                />
-                <div className="p-4">
-                  <h3 className="text-black font-bold text-lg">
-                    Hoodie Stylish
-                  </h3>
-                  <p className="text-gray-600">Rp 300.000</p>
-                  <a
-                    href="/detail-produk/3"
-                    className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
-                  >
-                    Detail
-                  </a>
-                </div>
+            {/* Product 3 */}
+            <div className="bg-white shadow-md rounded-md overflow-hidden">
+              <img
+                src="/assets/images/longTsirt-1.png"
+                alt="Produk 3"
+                className="w-full h-90 object-fill"
+              />
+              <div className="p-4">
+                <h3 className="text-black font-bold text-lg">Hoodie Stylish</h3>
+                <p className="text-gray-600">Rp 300.000</p>
+                <Link
+                  href={`/katalog/detail_produk?id=${3}`}
+                  className="mt-4 inline-block bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                >
+                  Detail
+                </Link>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       <div className="flex justify-center items-center flex-col mb-12">
@@ -114,8 +112,8 @@ const HomePage = () => {
           Ayo bagikan pengalaman berbelanja secara online menggunakan E-Katalog
           ADLV
         </p>
-        <InfiniteMovingCardsDemo />
-        <InfiniteMovingCardsDemo />
+        <InfiniteMovingCard />
+        <InfiniteMovingCard />
       </div>
 
       {/* Call to Action Section */}
@@ -127,12 +125,12 @@ const HomePage = () => {
           <p className="text-lg mb-6">
             Nikmati pengalaman belanja yang nyaman dan mudah bersama ADLV.
           </p>
-          <a
-            href="/daftar"
+          <Link
+            href={""}
             className="bg-gray-200 text-black px-6 py-3 rounded-md font-bold hover:bg-gray-600"
           >
             Daftar Sekarang
-          </a>
+          </Link>
         </div>
       </section>
     </div>

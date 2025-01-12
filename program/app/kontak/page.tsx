@@ -1,71 +1,90 @@
+"use client";
+import Image from "next/image";
 import React from "react";
-import LoadingWrapper from "@/components/LoadingWrapper";
+import { Carousel, Card } from "@/components/ui/ContactCard";
 
-const ContactPage = () => {
+export default function Page() {
+  const cards = data.map((card, index) => (
+    <Card key={card.src} card={card} index={index} />
+  ));
+
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <LoadingWrapper>
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto">
-          <h1 className="text-black text-3xl font-bold text-center mb-6">
-            Kontak
-          </h1>
-          <div className="mb-6">
-            <p className="text-gray-700 text-center">
-              Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih
-              lanjut, silakan hubungi kami melalui:
-            </p>
-          </div>
-          <div className="mb-4">
-            <h2 className="text-black text-xl font-semibold">Alamat</h2>
-            <p className="text-gray-700 mt-2">
-              Jl. Contoh No.123, Jakarta, Indonesia
-            </p>
-          </div>
-          <div className="mb-4">
-            <h2 className="text-black text-xl font-semibold">Email</h2>
-            <p className="text-gray-700 mt-2">
-              <a
-                href="mailto:contact@adlv.com"
-                className="text-gray-500 underline"
-              >
-                contact@adlv.com
-              </a>
-            </p>
-          </div>
-          <div className="mb-4">
-            <h2 className="text-black text-xl font-semibold">Telepon</h2>
-            <p className="text-gray-700 mt-2">
-              <a href="tel:+620123456789" className="text-gray-500 underline">
-                +62 012 3456 789
-              </a>
-            </p>
-          </div>
-          <div className="mb-4">
-            <h2 className="text-black text-xl font-semibold">Media Sosial</h2>
-            <p className="text-gray-700 mt-2">
-              Instagram:{" "}
-              <a
-                href="https://instagram.com/adlv"
-                target="_blank"
-                className="text-gray-500 underline"
-              >
-                @adlv
-              </a>
-              <br />
-              Facebook:{" "}
-              <a
-                href="https://facebook.com/adlv"
-                target="_blank"
-                className="text-gray-500 underline"
-              >
-                ADLV Official
-              </a>
-            </p>
-          </div>
-        </div>
-      </LoadingWrapper>
+    <div className="w-full h-full py-20">
+      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Get to know about contact Us.
+      </h2>
+      <Carousel items={cards} />
     </div>
+  );
+}
+
+const DummyContent = () => {
+  return (
+    <>
+      {[...new Array(3).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                The first rule of Apple club is that you boast about Apple club.
+              </span>{" "}
+              Keep a journal, quickly jot down a grocery list, and take amazing
+              class notes. Want to convert those notes to text? No problem.
+              Langotiya jeetu ka mara hua yaar is ready to capture every
+              thought.
+            </p>
+            <img
+              src="/assets/images/fb.png"
+              height="500"
+              width="500"
+              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+            />
+          </div>
+        );
+      })}
+    </>
   );
 };
 
-export default ContactPage;
+const data = [
+  {
+    category: "Facebook",
+    title: "Mari Terhubung melalui Facebook ADLV Store",
+    src: "/assets/images/fbbb.png",
+    content: <DummyContent />,
+  },
+  {
+    category: "Instagram",
+    title: "Lihat Reward menarik di instagram @ADLV_Store",
+    src: "/assets/images/ig.png",
+    content: <DummyContent />,
+  },
+  {
+    category: "Whatsapp",
+    title: "Hubungi kami untuk kerja sama",
+    src: "/assets/images/whatsapp.png",
+    content: <DummyContent />,
+  },
+
+  {
+    category: "Email kami",
+    title: "ADLV@gmail.com",
+    src: "/assets/images/email.png",
+    content: <DummyContent />,
+  },
+  {
+    category: "Alamat kami",
+    title: "Jl. Nasution",
+    src: "/assets/images/adlv_dtore.png",
+    content: <DummyContent />,
+  },
+  {
+    category: "Hiring",
+    title: "Hiring for a Staff Web Developer",
+    src: "/assets/images/hiring.png",
+    content: <DummyContent />,
+  },
+];

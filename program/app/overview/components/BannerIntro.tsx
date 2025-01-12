@@ -1,6 +1,7 @@
 import React from "react";
 import TypingEffect from "./TypingEffect";
 import CardCoutdown from "./CardCoutdown";
+import Link from "next/link";
 
 const BannerIntro = () => {
   return (
@@ -29,7 +30,9 @@ const BannerIntro = () => {
                 semi-formal.
               </p>
               <button className="bg-gray-900 text-white hover:bg-gray-700 px-8 py-4 rounded-full transition duration-300">
+                <Link href={"/katalog"}>
                 Lihat Katalog
+                </Link>
               </button>
             </div>
             <div>

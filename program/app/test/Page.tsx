@@ -1,64 +1,91 @@
+// "use client";
+// import Image from "next/image";
 // import React from "react";
-// import { BackgroundLines } from "@/components/ui/background-lines";
+// import { Carousel, Card } from "@/components/ui/ContactCard";
 
-// export function BackgroundLinesDemo() {
+// export function AppleCardsCarouselDemo() {
+//   const cards = data.map((card, index) => (
+//     <Card key={card.src} card={card} index={index} />
+//   ));
+
 //   return (
-//     <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-//       <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-//         Sanjana Airlines, <br /> Sajana Textiles.
+//     <div className="w-full h-full py-20">
+//       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+//         Get to know about contact Us.
 //       </h2>
-//       <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-//         Get the best advices from our experts, including expert artists,
-//         painters, marathon enthusiasts and RDX, totally free.
-//       </p>
-//     </BackgroundLines>
+//       <Carousel items={cards} />
+//     </div>
 //   );
 // }
-"use client";
 
-import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards"
+// const DummyContent = () => {
+//   return (
+//     <>
+//       {[...new Array(3).fill(1)].map((_, index) => {
+//         return (
+//           <div
+//             key={"dummy-content" + index}
+//             className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+//           >
+//             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+//               <span className="font-bold text-neutral-700 dark:text-neutral-200">
+//                 The first rule of Apple club is that you boast about Apple club.
+//               </span>{" "}
+//               Keep a journal, quickly jot down a grocery list, and take amazing
+//               class notes. Want to convert those notes to text? No problem.
+//               Langotiya jeetu ka mara hua yaar is ready to capture every
+//               thought.
+//             </p>
+//             <Image
+//               src="/assets/images/fb.png"
+//               alt="Macbook mockup from Aceternity UI"
+//               height="500"
+//               width="500"
+//               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+//             />
+//           </div>
+//         );
+//       })}
+//     </>
+//   );
+// };
 
-export function InfiniteMovingCardsDemo() {
-  return (
-    <div className="">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="fast"
-      />
-    </div>
-  );
-}
+// const data = [
+//   {
+//     category: "Facebook",
+//     title: "Mari Terhubung melalui Facebook",
+//     src: "",
+//     content: <DummyContent />,
+//   },
+//   {
+//     category: "Instagram",
+//     title: "Lihat Reward menarik di instagram",
+//     src: "",
+//     content: <DummyContent />,
+//   },
+//   {
+//     category: "Whatsapp",
+//     title: "Hubungi kami untuk kerja sama",
+//     src: "",
+//     content: <DummyContent />,
+//   },
 
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
+//   {
+//     category: "Email kami",
+//     title: "ADLV@gmail.com",
+//     src: "",
+//     content: <DummyContent />,
+//   },
+//   {
+//     category: "Alamat kami",
+//     title: "Jl. Nasution",
+//     src: "",
+//     content: <DummyContent />,
+//   },
+//   {
+//     category: "Hiring",
+//     title: "Hiring for a Staff Web Developer",
+//     src: "",
+//     content: <DummyContent />,
+//   },
+// ];

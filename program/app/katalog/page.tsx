@@ -2,6 +2,7 @@
 
 import LoadingWrapper from "@/components/LoadingWrapper";
 import React, { useState } from "react";
+import Link from "next/link";
 
 const Page = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -281,12 +282,14 @@ const Page = () => {
                 alt={item.name}
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
-              <h2 className="text-lg font-semibold mb-2 text-black">{item.name}</h2>
+              <h2 className="text-lg font-semibold mb-2 text-black">
+                {item.name}
+              </h2>
               <p className="text-gray-600 mb-4">
                 Harga: Rp{item.price.toLocaleString()}
               </p>
               <button className="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-600">
-                Masukkan ke Keranjang
+                <Link href={`/katalog/detail_produk?id=${item.id}`} >Masukkan ke Keranjang</Link>
               </button>
             </div>
           ))}

@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LoadingWrapper from "@/components/LoadingWrapper";
+import ConditionalLayout from "./ConditonalLayout";
 
 export const metadata = {
   title: "Next.js",
@@ -16,15 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
-        <header className="bg-gradient-to-r from-gray-900 to-gray-700 p-4">
-          <Navbar />
-        </header>
-        <main className="flex-grow z-20 bg-white">
+        <ConditionalLayout>
           <LoadingWrapper>{children}</LoadingWrapper>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
+        </ConditionalLayout>
       </body>
     </html>
   );

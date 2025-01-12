@@ -42,32 +42,19 @@ const HamburgerMenu = () => {
               </Link>
             </li>
             <li>
-              <a href="/register" className="text-gray-700 hover:font-bold">
+              <Link href="/register" className="text-gray-700 hover:font-bold">
                 Daftar
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/cart" className="text-gray-700 hover:font-bold">
-                Keranjang
-              </a>
-            </li>
-            <li>
-              <a
-                href="/transaction-history"
-                className="text-gray-700 hover:font-bold"
-              >
-                Riwayat Transaksi
-              </a>
-            </li>
-            <li>
-              <a href="/orders" className="text-gray-700 hover:font-bold">
+              <Link href="/pesanan" className="text-gray-700 hover:font-bold">
                 Pesanan
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/logout" className="text-gray-700 hover:text-red-500">
+              <Link href="/logout" className="text-gray-700 hover:text-red-500">
                 Log Out
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

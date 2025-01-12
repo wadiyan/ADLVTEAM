@@ -1,24 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
-type FormLoginProps = {
-  handleClose: () => void; // Define the type of handleClose
-};
-
-const FormLogin: React.FC<FormLoginProps> = ({ handleClose }) => {
+const FormLogin = () => {
   return (
     <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-10"
-        onClick={handleClose} // Close overlay when clicked
-      ></div>
-
-      {/* Main Content */}
-      <div className="hero min-h-screen fixed inset-0 flex items-center justify-center z-20">
-        <div
-          className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
-          onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the form
-        >
+      <div className="hero min-h-screen fixed inset-0 flex flex-col items-center justify-center z-20">
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <form className="card-body">
             <div className="form-control">
               <label className="label">
@@ -42,15 +29,26 @@ const FormLogin: React.FC<FormLoginProps> = ({ handleClose }) => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <Link href="#" className="label-text-alt link link-hover">
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+            <div className="form-control mt-2">
+              <button className="btn bg-gray-900 text-white">Login</button>
             </div>
+            <label className="label">
+              <Link
+                href="/register"
+                className="label-text-alt w-full text-center link link-hover"
+              >
+                Sudah Punya Akun? Daftar
+              </Link>
+            </label>
           </form>
+          <button className="bg-gray-900  w-full  text-white py-2 px-4 rounded-b-xl hover:bg-gray-600">
+            <Link href="/">Kembali ke Halaman Utama</Link>
+          </button>
         </div>
       </div>
     </>

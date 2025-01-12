@@ -36,11 +36,15 @@ const config: Config = {
       },
       height: {
         "90vh": "90vh",
+        "100vh": "100vh",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        custom: "0 0 4px rgba(0,0,0,0.25)",
       },
     },
   },

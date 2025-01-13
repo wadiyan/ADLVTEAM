@@ -8,6 +8,8 @@ const HamburgerMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  
+
   return (
     <div className="relative z-30">
       {/* Hamburger Button */}

@@ -20,7 +20,3 @@ model User {
   password  String   // Tambahkan password untuk login
   createdAt DateTime @default(now())
 }
-
-
-
-

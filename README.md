@@ -12,6 +12,7 @@ Website resmi untuk **ADLV** yang menawarkan berbagai produk seperti jaket, kaos
 2. **Instal dependensi**
    ```bash
    npm install
+   npm install @tabler/icons-react
    ```
 
 3. **Jalankan aplikasi**

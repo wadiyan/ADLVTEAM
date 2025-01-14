@@ -2,33 +2,17 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// Get all catalogs or category
 export async function GET(req: Request) {
-  const url = new URL(req.url);
-  const category = url.searchParams.get("category");
-
   try {
-    let catalogs;
-    if (category) {
-      // Filter catalogs by category if the category is provided
-      catalogs = await prisma.catalog.findMany({
-        where: { category },
-      });
-    } else {
-      // Fetch all catalogs if no category is specified
-      catalogs = await prisma.catalog.findMany();
-    }
-
+    const catalogs = await prisma.catalog.findMany();
     return new Response(JSON.stringify(catalogs), { status: 200 });
   } catch (error) {
     console.error("Error fetching catalogs:", error);
-    return new Response(
-      JSON.stringify({ error: "Failed to fetch catalogs" }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: "Failed to fetch catalogs" }), {
+      status: 500,
+    });
   }
 }
-
 
 export async function POST(req: Request) {
   try {

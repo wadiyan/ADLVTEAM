@@ -1,7 +1,6 @@
 {
-  "dependencies": {
-    "cookie": "^1.0.2",
-    "jsonwebtoken": "^9.0.2",
-    "sweetalert2": "^11.15.10"
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7"
   }
 }

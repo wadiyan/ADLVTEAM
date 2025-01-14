@@ -16,14 +16,14 @@ Website resmi untuk **ADLV** yang menawarkan berbagai produk seperti jaket, kaos
    ```
 3. **Buat database bernama adlv-app di xampp**
 4. **Buat file dengan nama .env**
-   ``bash
+   ```bash
    DATABASE_URL="mysql://root:@localhost:3306/adlv-app"
-   ``
+   ```
    (jika memakai password)
-   ``bash
+   ```bash
    DATABASE_URL="mysql://root:(pw disini)@localhost:3306/adlv-app"
-   ``
-   example
+   ```
+   example:
    ```bash
    DATABASE_URL="mysql://root:123@localhost:3306/adlv-app"
    ```

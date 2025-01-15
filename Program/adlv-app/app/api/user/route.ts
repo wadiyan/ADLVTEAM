@@ -3,8 +3,9 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req: Request) => {
   try {
-    const products = await fetchProducts(); // Ambil data dari JSON
-    return NextResponse.json(products);
+    console.log(`Request URL: ${req.url}`);
+    const users = await fetchProducts();
+    return NextResponse.json({ users });
   } catch (error) {
     console.error("Error fetching products:", error);
     return NextResponse.json(
@@ -16,22 +17,20 @@ export const GET = async (req: Request) => {
 
 export const POST = async (req: Request) => {
   try {
-    const body = await req.json(); // Ambil body request
-    const { title, description, price, image, category } = body;
+    const users = await req.json();
 
     // Validasi data
-    if (!title || !description || !price || !image || !category) {
+    if (!users.title || !users.description || !users.price || !users.category) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Invalid data: Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Simpan produk baru
-    await saveProduct({ title, description, price, image, category });
-    await syncDatabase();
-
-    return NextResponse.json({ message: "Product created successfully" });
+    const newUser = { ...users, id: Date.now().toString() };
+    await saveProduct(newUser);
+    syncDatabase();
+    return NextResponse.json({ msg: "User created" });
   } catch (error) {
     console.error("Error creating product:", error);
     return NextResponse.json(

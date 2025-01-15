@@ -1,42 +1,76 @@
-import { fetchProducts, saveProduct, syncDatabase } from "@/utils/actions";
 import { NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
 
-export const GET = async (req: Request) => {
+export async function GET() {
   try {
-    const products = await fetchProducts(); // Ambil data dari JSON
-    return NextResponse.json(products);
+    const users = await prisma.user.findMany();
+    return NextResponse.json(users);
   } catch (error) {
-    console.error("Error fetching products:", error);
     return NextResponse.json(
-      { error: "Failed to fetch products" },
+      { error: "Failed to fetch users" },
       { status: 500 }
     );
   }
-};
+}
 
-export const POST = async (req: Request) => {
+export async function POST(request: Request) {
+  const { name, email, password } = await request.json();
+
   try {
-    const body = await req.json(); // Ambil body request
-    const { title, description, price, image, category } = body;
-
-    // Validasi data
-    if (!title || !description || !price || !image || !category) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
-
-    // Simpan produk baru
-    await saveProduct({ title, description, price, image, category });
-    await syncDatabase();
-
-    return NextResponse.json({ message: "Product created successfully" });
+    const user = await prisma.user.create({
+      data: {
+        name,
+        email,
+        password,
+      },
+    });
+    return NextResponse.json(user);
   } catch (error) {
-    console.error("Error creating product:", error);
     return NextResponse.json(
-      { error: "Failed to create product" },
+      { error: "Failed to create user" },
       { status: 500 }
     );
   }
-};
+}
+
+
+export async function PUT(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  const { name, email, password } = await req.json();
+
+  try {
+    const user = await prisma.user.update({
+      where: { id: parseInt(params.id) },
+      data: {
+        name,
+        email,
+        password,
+      },
+    });
+    return NextResponse.json(user);
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to update user" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  try {
+    await prisma.user.delete({
+      where: { id: parseInt(params.id) },
+    });
+    return NextResponse.json({ message: "User deleted successfully" });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to delete user" },
+      { status: 500 }
+    );
+  }
+}

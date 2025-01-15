@@ -27,8 +27,6 @@ model Catalog {
   title       String
   description String
   price       Float
-  image       String   // URL gambar produk
-  category    String   // Nama kategori
   orders      Order[]  // Relasi satu katalog ke banyak pesanan
 }
 

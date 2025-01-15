@@ -174,8 +174,8 @@ export async function UPDATE(req: Request) {
 ```
 
 6. **Membuat API DELETE Products** (`/api/products`)
+```typescrip
 
-```typescript
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

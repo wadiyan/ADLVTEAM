@@ -29,7 +29,7 @@ Website resmi untuk **ADLV** yang menawarkan berbagai produk seperti jaket, kaos
    ```
 5. **migrate prisma**
    ```bash
-   npx prisma run dev
+   npx prisma migrate dev
    ```
 6. **Jalankan aplikasi**
    ```bash

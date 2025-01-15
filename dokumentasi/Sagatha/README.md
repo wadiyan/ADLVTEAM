@@ -7,9 +7,11 @@
 ## Daftar Pengerjaan
 
 1. **Membuat Halaman Kontak**
+
    - **Deskripsi**: Membuat halaman kontak untuk menampilkan informasi kontak.
    - **Screenshot**:
      ![alt text](Screenshot_15-1-2025_8127_localhost.jpeg)
+
    ```tsx
    "use client";
     ``import Image from "next/image";
@@ -102,194 +104,191 @@
       },
     ];``
    ```
-  
 
 2. **Membuat Halaman Login Form**
+
    - **Deskripsi**: Merancang dan mengimplementasikan form login dengan validasi.
-   ![alt text](<WhatsApp Image 2025-01-15 at 08.12.59_c3a25e1d.jpg>)
+     ![alt text](<WhatsApp Image 2025-01-15 at 08.12.59_c3a25e1d.jpg>)
+
    ```tsx
    import React from "react";
-import Link from "next/link";
+   import Link from "next/link";
 
-const FormLogin = () => {
-  return (
-    <>
-      <div className="hero min-h-screen fixed inset-0 flex flex-col items-center justify-center z-20">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <form className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-              <label className="label">
-                <Link href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </Link>
-              </label>
-            </div>
-            <div className="form-control mt-2">
-              <button className="btn bg-gray-900 text-white">Login</button>
-            </div>
-            <label className="label">
-              <Link
-                href="/register"
-                className="label-text-alt w-full text-center link link-hover"
-              >
-                Sudah Punya Akun? Daftar
-              </Link>
-            </label>
-          </form>
-          <button className="bg-gray-900  w-full  text-white py-2 px-4 rounded-b-xl hover:bg-gray-600">
-            <Link href="/">Kembali ke Halaman Utama</Link>
-          </button>
-        </div>
-      </div>
-    </>
-  );
-};
+   const FormLogin = () => {
+     return (
+       <>
+         <div className="hero min-h-screen fixed inset-0 flex flex-col items-center justify-center z-20">
+           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+             <form className="card-body">
+               <div className="form-control">
+                 <label className="label">
+                   <span className="label-text">Email</span>
+                 </label>
+                 <input
+                   type="email"
+                   placeholder="email"
+                   className="input input-bordered"
+                   required
+                 />
+               </div>
+               <div className="form-control">
+                 <label className="label">
+                   <span className="label-text">Password</span>
+                 </label>
+                 <input
+                   type="password"
+                   placeholder="password"
+                   className="input input-bordered"
+                   required
+                 />
+                 <label className="label">
+                   <Link href="#" className="label-text-alt link link-hover">
+                     Forgot password?
+                   </Link>
+                 </label>
+               </div>
+               <div className="form-control mt-2">
+                 <button className="btn bg-gray-900 text-white">Login</button>
+               </div>
+               <label className="label">
+                 <Link
+                   href="/register"
+                   className="label-text-alt w-full text-center link link-hover"
+                 >
+                   Sudah Punya Akun? Daftar
+                 </Link>
+               </label>
+             </form>
+             <button className="bg-gray-900  w-full  text-white py-2 px-4 rounded-b-xl hover:bg-gray-600">
+               <Link href="/">Kembali ke Halaman Utama</Link>
+             </button>
+           </div>
+         </div>
+       </>
+     );
+   };
 
-export default FormLogin;
-````
+   export default FormLogin;
+   ```
 
 3. **Membuat Register Form**
 
    - **Deskripsi**: Membuat form registrasi pengguna baru dengan validasi data.
      ![alt text](<WhatsApp Image 2025-01-15 at 08.12.59_c3a25e1d-1.jpg>)
 
-   ```bash
+   ```tsx
    import React from "react";
    import Link from "next/link";
+
+   const FormRegister = () => {
+     return (
+       <>
+         <div className="hero min-h-screen fixed inset-0 flex flex-col items-center justify-center z-20">
+           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+             <form className="card-body">
+               <div className="form-control">
+                 <label className="label">
+                   <span className="label-text">Email</span>
+                 </label>
+                 <input
+                   type="email"
+                   placeholder="email"
+                   className="input input-bordered"
+                   required
+                 />
+               </div>
+               <div className="form-control">
+                 <label className="label">
+                   <span className="label-text">Password</span>
+                 </label>
+                 <input
+                   type="password"
+                   placeholder="password"
+                   className="input input-bordered"
+                   required
+                 />
+
+                 <label className="label">
+                   <span className="label-text">Confirm Password</span>
+                 </label>
+                 <input
+                   type="password"
+                   placeholder="Masukan ulang password"
+                   className="input input-bordered"
+                   required
+                 />
+               </div>
+               <div className="form-control mt-2">
+                 <button className="btn bg-gray-900 text-white">Daftar</button>
+               </div>
+               <label className="label">
+                 <Link
+                   href="/login"
+                   className="label-text-alt w-full text-center link link-hover"
+                 >
+                   Sudah Punya Akun? Masuk
+                 </Link>
+               </label>
+             </form>
+             <button className="bg-gray-900  w-full  text-white py-2 px-4 rounded-b-xl hover:bg-gray-600">
+               <Link href="/">Kembali ke Halaman Utama</Link>
+             </button>
+           </div>
+         </div>
+       </>
+     );
+   };
+
+   export default FormRegister;
    ```
 
-const FormRegister = () => {
-return (
-<>
-<div className="hero min-h-screen fixed inset-0 flex flex-col items-center justify-center z-20">
-<div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-<form className="card-body">
-<div className="form-control">
-<label className="label">
-<span className="label-text">Email</span>
-</label>
-<input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-</div>
-<div className="form-control">
-<label className="label">
-<span className="label-text">Password</span>
-</label>
-<input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-
-              <label className="label">
-                <span className="label-text">Confirm Password</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Masukan ulang password"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control mt-2">
-              <button className="btn bg-gray-900 text-white">Daftar</button>
-            </div>
-            <label className="label">
-              <Link
-                href="/login"
-                className="label-text-alt w-full text-center link link-hover"
-              >
-                Sudah Punya Akun? Masuk
-              </Link>
-            </label>
-          </form>
-          <button className="bg-gray-900  w-full  text-white py-2 px-4 rounded-b-xl hover:bg-gray-600">
-            <Link href="/">Kembali ke Halaman Utama</Link>
-          </button>
-        </div>
-      </div>
-    </>
-
-);
-};
-
-export default FormRegister;
-
-````
-
 4. **Membuat Halaman Pesanan**
+
 - **Deskripsi**: Menampilkan daftar pesanan pengguna dengan status terkini.
-![alt text](image.png)
-``` tsx
+  ![alt text](image.png)
+
+```tsx
 import React from "react";
 import Link from "next/link";
 
 const OrderList = () => {
-const orders = [
-  { id: 1, status: "Sedang Diproses" },
-  { id: 2, status: "Dikirim" },
-  { id: 3, status: "Selesai" },
-];
+  const orders = [
+    { id: 1, status: "Sedang Diproses" },
+    { id: 2, status: "Dikirim" },
+    { id: 3, status: "Selesai" },
+  ];
 
-return (
-  <div className="text-center">
-    <header className="bg-gray-900 text-white flex flex-col justify-center items-center py-10">
-      <h1 className="text-3xl font-semibold">Daftar Pesanan</h1>
-    </header>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto my-10 w-3/4">
-      {orders.map((order) => (
-        <div
-          key={order.id}
-          className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow"
-        >
-          <h3 className="text-xl font-semibold mb-2">Pesanan #{order.id}</h3>
-          <p className="text-gray-600">Status: {order.status}</p>
-        </div>
-      ))}
+  return (
+    <div className="text-center">
+      <header className="bg-gray-900 text-white flex flex-col justify-center items-center py-10">
+        <h1 className="text-3xl font-semibold">Daftar Pesanan</h1>
+      </header>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto my-10 w-3/4">
+        {orders.map((order) => (
+          <div
+            key={order.id}
+            className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <h3 className="text-xl font-semibold mb-2">Pesanan #{order.id}</h3>
+            <p className="text-gray-600">Status: {order.status}</p>
+          </div>
+        ))}
+      </div>
+      <button className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-600 mt-4">
+        <Link href="/">Kembali ke Halaman Utama</Link>
+      </button>
     </div>
-    <button
-      className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-600 mt-4"
-    >
-     <Link href="/">
-      Kembali ke Halaman Utama
-     </Link>
-    </button>
-  </div>
-);
+  );
 };
 
 export default OrderList;
-````
+```
 
 5. **Menambahkan SweetAlert2**
 
    - **Deskripsi**: Mengintegrasikan SweetAlert2 untuk pemberitahuan dan dialog interaktif.
-     ![alt text](<WhatsApp Image 2025-01-15 at 08.39.29_3562778f.jpg>)
+
+   ![alt text](<WhatsApp Image 2025-01-15 at 08.39.29_3562778f.jpg>)
 
 6. **Menambahkan Aset Gedung, Facebook, dan Instagram**
 
